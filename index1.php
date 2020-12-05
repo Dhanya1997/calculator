@@ -11,16 +11,16 @@
   <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
     <ul class="navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link" href="index.html">Addition</a>
+        <a class="nav-link" href="index.php">Addition</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="index1.html">Subtraction</a>
+        <a class="nav-link" href="index1.php">Subtraction</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="index2.html">Multiplication</a>
+        <a class="nav-link" href="index2.php">Multiplication</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="index3.html">Division</a>
+        <a class="nav-link" href="index3.php">Division</a>
       </li>
     </ul>
   </nav>
@@ -40,8 +40,8 @@
                         <td><input type="text" class="form-control" id="no2"></td>
                     </tr>
                     <tr>
-                        <td>Quotient</td>
-                        <td><input type="text" class="form-control" id="quo"></td>
+                        <td>Difference</td>
+                        <td><input type="text" class="form-control" id="dif"></td>
                     </tr>
                 </table>
                 <table class="table table-borderless">
@@ -50,14 +50,14 @@
                       <td></td>
                       <td>
                       <div class="btn-group" role="group" aria-label="Basic example">
-                          <button onClick=buttonClick() type="button" class="btn btn-info">DIV</button>
+                          <button onClick=buttonClick() type="button" class="btn btn-info">SUB</button>
                           <button onClick=clr() type="button" class="btn btn-secondary">RESET</button>
                         </div>
                       </td>
                   </tr>
               </table>
             </div>
-            <div class="col col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2">
+            <div class="col col-12 cl-sm-12 col-md-2 col-lg-2 col-xl-2">
 
             </div>
         </div>
@@ -66,9 +66,11 @@
         function buttonClick() {
             var getno1=parseInt(document.getElementById("no1").value)
             var getno2=parseInt(document.getElementById("no2").value)
+            console.log(getno1)
+            console.log(getno2)
             if(Number.isInteger(getno1 && getno2)){
-              result=getno1/getno2
-              document.getElementById("quo").value=result
+              result=getno1-getno2
+              document.getElementById("dif").value=result
             }
             else{
               alert("Enter a number")
@@ -77,8 +79,9 @@
         function clr() {
             document.getElementById("no1").value=''
             document.getElementById("no2").value=''
-            document.getElementById("quo").value=''
+            document.getElementById("dif").value=''
         }
     </script>
 </body>
-</html>
+  </html>
+
